@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (keep processed, ignore raw downloads)
+data/raw/
+*.csv.gz
+*.zip
+
+# Models
+outputs/models/*.pt
+outputs/models/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Kaggle credentials
+kaggle.json
+.kaggle/
+
+# Streamlit
+.streamlit/secrets.toml
