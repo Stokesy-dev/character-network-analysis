@@ -1,0 +1,258 @@
+source,target,source_name,target_name,weight,weight_norm
+0,1,Luke,Finn,55,1.0
+0,2,Luke,Qui-Gon,3,0.0545
+0,3,Luke,Obi-Wan,4,0.0727
+0,4,Luke,Rey,42,0.7636
+0,5,Luke,Anakin,7,0.1273
+0,6,Luke,Han,6,0.1091
+0,7,Luke,C-3Po,7,0.1273
+0,8,Luke,Leia,17,0.3091
+0,9,Luke,Jar Jar,16,0.2909
+0,10,Luke,Red Leader,6,0.1091
+0,11,Luke,Padme,31,0.5636
+0,12,Luke,Poe,2,0.0364
+0,13,Luke,Darth Vader,7,0.1273
+0,14,Luke,Emperor,17,0.3091
+0,15,Luke,Yoda,2,0.0364
+0,16,Luke,Kylo Ren,12,0.2182
+0,17,Luke,Lando,24,0.4364
+0,18,Luke,Bail Organa,4,0.0727
+0,19,Luke,Captain Panaka,2,0.0364
+0,20,Luke,Nute Gunray,8,0.1455
+0,21,Luke,Biggs,1,0.0182
+0,23,Luke,Gold Leader,2,0.0364
+0,24,Luke,General Hux,2,0.0364
+0,26,Luke,Tarkin,1,0.0182
+0,27,Luke,Mace Windu,1,0.0182
+0,28,Luke,Ric Olie,1,0.0182
+0,29,Luke,Fode/Beed,2,0.0364
+0,30,Luke,Rune,2,0.0364
+0,31,Luke,Shmi,2,0.0364
+0,32,Luke,Admiral Ackbar,1,0.0182
+1,2,Finn,Qui-Gon,9,0.1636
+1,3,Finn,Obi-Wan,41,0.7455
+1,4,Finn,Rey,48,0.8727
+1,5,Finn,Anakin,26,0.4727
+1,6,Finn,Han,20,0.3636
+1,7,Finn,C-3Po,10,0.1818
+1,8,Finn,Leia,32,0.5818
+1,9,Finn,Jar Jar,14,0.2545
+1,10,Finn,Red Leader,9,0.1636
+1,11,Finn,Padme,26,0.4727
+1,13,Finn,Darth Vader,3,0.0545
+1,14,Finn,Emperor,4,0.0727
+1,15,Finn,Yoda,5,0.0909
+1,16,Finn,Kylo Ren,6,0.1091
+1,17,Finn,Lando,6,0.1091
+1,18,Finn,Bail Organa,10,0.1818
+1,19,Finn,Captain Panaka,1,0.0182
+1,21,Finn,Biggs,3,0.0545
+1,22,Finn,Wedge,5,0.0909
+1,23,Finn,Gold Leader,2,0.0364
+1,27,Finn,Mace Windu,1,0.0182
+1,34,Finn,Count Dooku,1,0.0182
+2,3,Qui-Gon,Obi-Wan,9,0.1636
+2,4,Qui-Gon,Rey,7,0.1273
+2,5,Qui-Gon,Anakin,12,0.2182
+2,6,Qui-Gon,Han,6,0.1091
+2,7,Qui-Gon,C-3Po,24,0.4364
+2,8,Qui-Gon,Leia,19,0.3455
+2,9,Qui-Gon,Jar Jar,6,0.1091
+2,10,Qui-Gon,Red Leader,7,0.1273
+2,11,Qui-Gon,Padme,2,0.0364
+2,13,Qui-Gon,Darth Vader,1,0.0182
+2,14,Qui-Gon,Emperor,1,0.0182
+3,4,Obi-Wan,Rey,30,0.5455
+3,5,Obi-Wan,Anakin,3,0.0545
+3,7,Obi-Wan,C-3Po,1,0.0182
+3,8,Obi-Wan,Leia,1,0.0182
+3,9,Obi-Wan,Jar Jar,2,0.0364
+3,10,Obi-Wan,Red Leader,1,0.0182
+3,17,Obi-Wan,Lando,1,0.0182
+3,18,Obi-Wan,Bail Organa,10,0.1818
+3,19,Obi-Wan,Captain Panaka,1,0.0182
+4,5,Rey,Anakin,13,0.2364
+4,6,Rey,Han,34,0.6182
+4,7,Rey,C-3Po,4,0.0727
+4,8,Rey,Leia,5,0.0909
+4,9,Rey,Jar Jar,34,0.6182
+4,10,Rey,Red Leader,4,0.0727
+4,11,Rey,Padme,14,0.2545
+4,12,Rey,Poe,2,0.0364
+4,13,Rey,Darth Vader,3,0.0545
+4,14,Rey,Emperor,2,0.0364
+4,15,Rey,Yoda,7,0.1273
+4,16,Rey,Kylo Ren,3,0.0545
+4,17,Rey,Lando,11,0.2
+4,18,Rey,Bail Organa,8,0.1455
+4,19,Rey,Captain Panaka,1,0.0182
+4,20,Rey,Nute Gunray,1,0.0182
+4,22,Rey,Wedge,1,0.0182
+4,27,Rey,Mace Windu,2,0.0364
+4,29,Rey,Fode/Beed,2,0.0364
+4,30,Rey,Rune,1,0.0182
+4,31,Rey,Shmi,3,0.0545
+5,6,Anakin,Han,4,0.0727
+5,7,Anakin,C-3Po,16,0.2909
+5,8,Anakin,Leia,10,0.1818
+5,9,Anakin,Jar Jar,10,0.1818
+5,10,Anakin,Red Leader,5,0.0909
+5,11,Anakin,Padme,15,0.2727
+5,12,Anakin,Poe,1,0.0182
+5,13,Anakin,Darth Vader,1,0.0182
+5,14,Anakin,Emperor,1,0.0182
+5,17,Anakin,Lando,2,0.0364
+5,27,Anakin,Mace Windu,2,0.0364
+6,7,Han,C-3Po,10,0.1818
+6,8,Han,Leia,9,0.1636
+6,9,Han,Jar Jar,23,0.4182
+6,10,Han,Red Leader,3,0.0545
+6,11,Han,Padme,2,0.0364
+6,12,Han,Poe,3,0.0545
+6,13,Han,Darth Vader,1,0.0182
+6,16,Han,Kylo Ren,1,0.0182
+6,21,Han,Biggs,2,0.0364
+6,22,Han,Wedge,1,0.0182
+6,23,Han,Gold Leader,1,0.0182
+6,31,Han,Shmi,1,0.0182
+7,8,C-3Po,Leia,25,0.4545
+7,9,C-3Po,Jar Jar,7,0.1273
+7,11,C-3Po,Padme,3,0.0545
+7,13,C-3Po,Darth Vader,1,0.0182
+7,14,C-3Po,Emperor,3,0.0545
+7,20,C-3Po,Nute Gunray,1,0.0182
+7,21,C-3Po,Biggs,1,0.0182
+8,9,Leia,Jar Jar,10,0.1818
+8,10,Leia,Red Leader,13,0.2364
+8,11,Leia,Padme,14,0.2545
+8,12,Leia,Poe,1,0.0182
+8,13,Leia,Darth Vader,1,0.0182
+8,14,Leia,Emperor,5,0.0909
+8,17,Leia,Lando,1,0.0182
+8,22,Leia,Wedge,3,0.0545
+8,28,Leia,Ric Olie,2,0.0364
+8,33,Leia,Piett,1,0.0182
+8,34,Leia,Count Dooku,1,0.0182
+9,10,Jar Jar,Red Leader,22,0.4
+9,11,Jar Jar,Padme,9,0.1636
+9,12,Jar Jar,Poe,5,0.0909
+9,13,Jar Jar,Darth Vader,6,0.1091
+9,14,Jar Jar,Emperor,15,0.2727
+9,15,Jar Jar,Yoda,8,0.1455
+9,16,Jar Jar,Kylo Ren,8,0.1455
+9,17,Jar Jar,Lando,8,0.1455
+9,18,Jar Jar,Bail Organa,7,0.1273
+9,19,Jar Jar,Captain Panaka,1,0.0182
+9,20,Jar Jar,Nute Gunray,1,0.0182
+9,23,Jar Jar,Gold Leader,1,0.0182
+9,27,Jar Jar,Mace Windu,2,0.0364
+9,28,Jar Jar,Ric Olie,1,0.0182
+9,29,Jar Jar,Fode/Beed,1,0.0182
+9,30,Jar Jar,Rune,1,0.0182
+10,11,Red Leader,Padme,19,0.3455
+10,12,Red Leader,Poe,1,0.0182
+10,13,Red Leader,Darth Vader,1,0.0182
+10,14,Red Leader,Emperor,3,0.0545
+10,15,Red Leader,Yoda,2,0.0364
+10,16,Red Leader,Kylo Ren,3,0.0545
+10,17,Red Leader,Lando,3,0.0545
+10,18,Red Leader,Bail Organa,4,0.0727
+10,21,Red Leader,Biggs,1,0.0182
+10,22,Red Leader,Wedge,3,0.0545
+10,23,Red Leader,Gold Leader,3,0.0545
+10,24,Red Leader,General Hux,1,0.0182
+10,25,Red Leader,General Grievous,2,0.0364
+10,26,Red Leader,Tarkin,1,0.0182
+10,27,Red Leader,Mace Windu,2,0.0364
+10,28,Red Leader,Ric Olie,1,0.0182
+10,29,Red Leader,Fode/Beed,1,0.0182
+10,30,Red Leader,Rune,1,0.0182
+11,12,Padme,Poe,4,0.0727
+11,13,Padme,Darth Vader,3,0.0545
+11,14,Padme,Emperor,10,0.1818
+11,15,Padme,Yoda,2,0.0364
+11,16,Padme,Kylo Ren,1,0.0182
+11,17,Padme,Lando,8,0.1455
+11,18,Padme,Bail Organa,2,0.0364
+11,20,Padme,Nute Gunray,3,0.0545
+11,22,Padme,Wedge,5,0.0909
+11,23,Padme,Gold Leader,5,0.0909
+11,24,Padme,General Hux,2,0.0364
+11,25,Padme,General Grievous,4,0.0727
+11,26,Padme,Tarkin,1,0.0182
+11,27,Padme,Mace Windu,3,0.0545
+11,28,Padme,Ric Olie,2,0.0364
+11,29,Padme,Fode/Beed,1,0.0182
+11,30,Padme,Rune,1,0.0182
+11,34,Padme,Count Dooku,1,0.0182
+12,13,Poe,Darth Vader,2,0.0364
+13,14,Darth Vader,Emperor,3,0.0545
+13,16,Darth Vader,Kylo Ren,1,0.0182
+13,17,Darth Vader,Lando,1,0.0182
+14,15,Emperor,Yoda,8,0.1455
+14,16,Emperor,Kylo Ren,7,0.1273
+14,17,Emperor,Lando,17,0.3091
+14,18,Emperor,Bail Organa,4,0.0727
+14,19,Emperor,Captain Panaka,1,0.0182
+14,20,Emperor,Nute Gunray,5,0.0909
+14,21,Emperor,Biggs,2,0.0364
+14,23,Emperor,Gold Leader,1,0.0182
+14,25,Emperor,General Grievous,1,0.0182
+14,26,Emperor,Tarkin,1,0.0182
+15,16,Yoda,Kylo Ren,3,0.0545
+15,17,Yoda,Lando,6,0.1091
+15,18,Yoda,Bail Organa,2,0.0364
+15,35,Yoda,Lama Su,4,0.0727
+15,36,Yoda,Red Ten,2,0.0364
+16,17,Kylo Ren,Lando,8,0.1455
+16,18,Kylo Ren,Bail Organa,1,0.0182
+16,21,Kylo Ren,Biggs,1,0.0182
+16,22,Kylo Ren,Wedge,1,0.0182
+16,23,Kylo Ren,Gold Leader,1,0.0182
+17,18,Lando,Bail Organa,8,0.1455
+17,19,Lando,Captain Panaka,4,0.0727
+17,20,Lando,Nute Gunray,8,0.1455
+17,21,Lando,Biggs,3,0.0545
+17,23,Lando,Gold Leader,3,0.0545
+17,24,Lando,General Hux,2,0.0364
+17,26,Lando,Tarkin,1,0.0182
+17,27,Lando,Mace Windu,1,0.0182
+17,29,Lando,Fode/Beed,3,0.0545
+17,30,Lando,Rune,2,0.0364
+17,31,Lando,Shmi,3,0.0545
+17,32,Lando,Admiral Ackbar,1,0.0182
+17,35,Lando,Lama Su,2,0.0364
+17,36,Lando,Red Ten,1,0.0182
+18,20,Bail Organa,Nute Gunray,1,0.0182
+18,26,Bail Organa,Tarkin,1,0.0182
+19,20,Captain Panaka,Nute Gunray,3,0.0545
+19,21,Captain Panaka,Biggs,1,0.0182
+19,22,Captain Panaka,Wedge,1,0.0182
+19,23,Captain Panaka,Gold Leader,1,0.0182
+20,23,Nute Gunray,Gold Leader,1,0.0182
+20,26,Nute Gunray,Tarkin,1,0.0182
+20,27,Nute Gunray,Mace Windu,1,0.0182
+21,22,Biggs,Wedge,2,0.0364
+21,23,Biggs,Gold Leader,3,0.0545
+22,23,Wedge,Gold Leader,4,0.0727
+22,24,Wedge,General Hux,1,0.0182
+22,25,Wedge,General Grievous,1,0.0182
+22,34,Wedge,Count Dooku,1,0.0182
+23,24,Gold Leader,General Hux,2,0.0364
+23,25,Gold Leader,General Grievous,2,0.0364
+24,25,General Hux,General Grievous,1,0.0182
+24,27,General Hux,Mace Windu,1,0.0182
+25,26,General Grievous,Tarkin,1,0.0182
+27,28,Mace Windu,Ric Olie,1,0.0182
+27,29,Mace Windu,Fode/Beed,1,0.0182
+27,30,Mace Windu,Rune,1,0.0182
+28,29,Ric Olie,Fode/Beed,2,0.0364
+28,30,Ric Olie,Rune,2,0.0364
+28,33,Ric Olie,Piett,1,0.0182
+29,30,Fode/Beed,Rune,5,0.0909
+29,31,Fode/Beed,Shmi,4,0.0727
+29,32,Fode/Beed,Admiral Ackbar,1,0.0182
+30,31,Rune,Shmi,3,0.0545
+30,32,Rune,Admiral Ackbar,1,0.0182
+31,32,Shmi,Admiral Ackbar,1,0.0182
+35,36,Lama Su,Red Ten,2,0.0364
