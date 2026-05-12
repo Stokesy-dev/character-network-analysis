@@ -29,7 +29,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.data import Data
-from torch_geometric.nn import GCNConv, SAGEConv
+from torch_geometric.nn import GCNConv, SAGEConv, GATConv
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import (
@@ -271,6 +271,37 @@ class GCN(nn.Module):
         return F.log_softmax(x, dim=1)
 
 
+class GAT(nn.Module):
+    """
+    2-layer Graph Attention Network (Veličković et al., 2018).
+
+    Architecture:
+        Input → GATConv(hidden, heads=4) → ELU → Dropout
+              → GATConv(n_classes, heads=1, concat=False) → LogSoftmax
+    """
+
+    def __init__(
+        self,
+        in_channels: int,
+        hidden_channels: int,
+        out_channels: int,
+        dropout: float = 0.4,
+        heads: int = 4,
+    ) -> None:
+        super().__init__()
+        self.conv1   = GATConv(in_channels, hidden_channels, heads=heads, dropout=dropout)
+        self.conv2   = GATConv(hidden_channels * heads, out_channels, heads=1, concat=False, dropout=dropout)
+        self.dropout = dropout
+
+    def forward(self, x: torch.Tensor, edge_index: torch.Tensor) -> torch.Tensor:
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        x = self.conv1(x, edge_index)
+        x = F.elu(x)
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        x = self.conv2(x, edge_index)
+        return F.log_softmax(x, dim=1)
+
+
 class GraphSAGE(nn.Module):
     """
     2-layer GraphSAGE (Hamilton et al., 2017).
@@ -479,9 +510,11 @@ def plot_training_curves(
     gcn_test: list,
     sage_train: list,
     sage_test: list,
+    gat_train: list = None,
+    gat_test: list = None,
     filename: str = "training_curves.png",
 ) -> Path:
-    """Plot training + test loss curves for both models."""
+    """Plot training + test loss curves for the models."""
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -490,15 +523,21 @@ def plot_training_curves(
     CARD_BG  = "#161b22"
     TEXT_CLR = "#e6edf3"
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5), facecolor=DARK_BG)
+    num_plots = 3 if gat_train is not None else 2
+    fig, axes = plt.subplots(1, num_plots, figsize=(6 * num_plots, 5), facecolor=DARK_BG)
 
-    for ax, train_l, test_l, name, color in zip(
-        axes,
-        [gcn_train, sage_train],
-        [gcn_test,  sage_test],
-        ["GCN", "GraphSAGE"],
-        ["#58a6ff", "#3fb950"],
-    ):
+    train_lists = [gcn_train, sage_train]
+    test_lists = [gcn_test, sage_test]
+    names = ["GCN", "GraphSAGE"]
+    colors = ["#58a6ff", "#3fb950"]
+    
+    if gat_train is not None:
+        train_lists.append(gat_train)
+        test_lists.append(gat_test)
+        names.append("GAT")
+        colors.append("#d2a8ff")
+
+    for ax, train_l, test_l, name, color in zip(axes, train_lists, test_lists, names, colors):
         ax.set_facecolor(CARD_BG)
         epochs = range(1, len(train_l) + 1)
         ax.plot(epochs, train_l, color=color,    linewidth=2,   label="Train loss")

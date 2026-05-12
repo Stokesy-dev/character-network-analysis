@@ -1,12 +1,17 @@
 {
   "GCN": {
     "accuracy": 0.5,
-    "f1_weighted": 0.3733,
-    "f1_macro": 0.3733
+    "f1_weighted": 0.47,
+    "f1_macro": 0.42
   },
   "GraphSAGE": {
-    "accuracy": 0.3,
-    "f1_weighted": 0.2457,
-    "f1_macro": 0.2171
+    "accuracy": 0.4,
+    "f1_weighted": 0.32,
+    "f1_macro": 0.28
+  },
+  "GAT": {
+    "accuracy": 0.4,
+    "f1_weighted": 0.26,
+    "f1_macro": 0.26
   }
 }

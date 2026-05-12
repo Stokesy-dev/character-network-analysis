@@ -20,7 +20,7 @@ from src.centrality      import build_centrality_table
 from src.communities     import detect_louvain
 from src.graph_ml import (
     prepare_graph_data,
-    GCN, GraphSAGE,
+    GCN, GraphSAGE, GAT,
     train_model,
     evaluate_model,
     plot_training_curves,
@@ -88,21 +88,40 @@ def main() -> None:
         weight_decay=5e-4, patience=35,
     )
 
+    # ── Train GAT ──────────────────────────────────────────
+    gat_model = GAT(
+        in_channels=in_channels,
+        hidden_channels=hidden_dim,
+        out_channels=n_classes,
+        dropout=0.4,
+        heads=4,
+    )
+    gat_model, gat_train_loss, gat_test_loss = train_model(
+        gat_model, data,
+        model_name="GAT",
+        epochs=300, lr=0.005,
+        weight_decay=5e-4, patience=35,
+    )
+
     # ── Evaluate ───────────────────────────────────────────
     gcn_results  = evaluate_model(gcn_model,  data, label_encoder, "GCN")
     sage_results = evaluate_model(sage_model, data, label_encoder, "GraphSAGE")
+    gat_results  = evaluate_model(gat_model,  data, label_encoder, "GAT")
 
     # ── Plots ──────────────────────────────────────────────
     plot_training_curves(
         gcn_train_loss,  gcn_test_loss,
         sage_train_loss, sage_test_loss,
+        gat_train_loss,  gat_test_loss,
     )
     plot_confusion_matrix(gcn_results,  label_encoder, "GCN")
     plot_confusion_matrix(sage_results, label_encoder, "GraphSAGE")
+    plot_confusion_matrix(gat_results,  label_encoder, "GAT")
 
     # ── Save models ────────────────────────────────────────
     save_model(gcn_model,  "gcn")
     save_model(sage_model, "graphsage")
+    save_model(gat_model,  "gat")
 
     # ── Save results JSON ──────────────────────────────────
     summary = {
@@ -115,6 +134,11 @@ def main() -> None:
             "accuracy":    sage_results["accuracy"],
             "f1_weighted": sage_results["f1_weighted"],
             "f1_macro":    sage_results["f1_macro"],
+        },
+        "GAT": {
+            "accuracy":    gat_results["accuracy"],
+            "f1_weighted": gat_results["f1_weighted"],
+            "f1_macro":    gat_results["f1_macro"],
         },
     }
     save_json(summary, "graph_ml_results.json")
